@@ -1,0 +1,25 @@
+// Code EyesOnMe Component Here
+import React from 'react';
+
+export default class EyesOnMe extends React.Component {
+
+  gained = () => {
+    console.log("Good!");
+  }
+
+  lost = () => {
+    console.log("Hey! Eyes on me!");
+  }
+
+  render() {
+    return (
+      <div>
+        <button
+        onFocus={this.gained}
+        onBlur={this.lost}>
+        Special Button
+        </button>
+      </div>
+    );
+  }
+}
